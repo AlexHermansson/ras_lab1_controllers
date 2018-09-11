@@ -136,8 +136,8 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/ras_lab1_open_loop_control_node.cpp)
 
-add_executable(open_loop_controller src/open_loop_controller.cpp)
-target_link_libraries(open_loop_controller ${catkin_LIBRARIES})
+add_executable(open_controller src/open_controller.cpp)
+target_link_libraries(open_controller ${catkin_LIBRARIES})
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the

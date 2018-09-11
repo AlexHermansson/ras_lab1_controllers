@@ -3,7 +3,7 @@
 
 int main(int argc, char **argv)
 {
-  ros::init(argc, argv, "open_loop_controller");
+  ros::init(argc, argv, "open_controller");
   ros::NodeHandle nh;
 	
 	//Loop rate, 10 Hz.
@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 	ras_lab1_msgs::PWM pwm_msg;
 	
 	pwm_msg.PWM1 = 255;
-	pwm_msg.PWM2 = 225;
+	pwm_msg.PWM2 = 255;
 	
 	while (ros::ok()) {
 		pub.publish(pwm_msg);

@@ -1,0 +1,10 @@
+<launch>
+
+  <!-- launch the distance sensors -->  
+  <include file="$(find ras_lab1_launch)/launch/kobuki_lab1.launch" />
+
+  <!-- My own nodes -->
+  <node pkg="ras_lab1_open_loop_control" type="open_controller" name="open_controller" />
+
+
+</launch>

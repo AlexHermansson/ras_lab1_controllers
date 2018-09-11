@@ -11,8 +11,8 @@ const double wheel_radius = 0.0352;
 const double base = 0.23;
 const double dt = 1.0 / control_frequency;
 
-const double alpha = 1;
-const double beta  = 5.0;
+const double alpha = 5;
+const double beta  = 20;
 
 double v_robot_desired;
 double w_robot_desired;
