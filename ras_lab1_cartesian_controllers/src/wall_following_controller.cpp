@@ -2,7 +2,7 @@
 #include <geometry_msgs/Twist.h>
 #include <ras_lab1_msgs/ADConverter.h>
 
-const double alpha = 0.02;
+const double alpha = 0.025;
 const double v = 0.2;
 
 int adc_left;

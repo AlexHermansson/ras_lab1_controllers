@@ -1,15 +1,12 @@
 <package>
- <name>ras_lab1_launch</name>
+ <name>controllers_launch</name>
   <version>0.1.0</version>
   <description>
     Launch files for RAS lab1.
   </description>
   <license>BSD</license>
 
-  <url type="website">http://wiki.ros.org/ras_lab1_launch</url>
-
-  <author email="fevb@kth.se">Francisco Vina</author>
-  <maintainer email="diogoa@kth.se">Diogo Almeida</maintainer>
+  <maintainer email="grobgeld@kth.se">Alex Hermansson</maintainer>
 
   <buildtool_depend>catkin</buildtool_depend>
 
