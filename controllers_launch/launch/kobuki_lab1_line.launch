@@ -1,0 +1,11 @@
+<launch>
+
+  <!-- launch the distance sensors -->  
+  <include file="$(find ras_lab1_launch)/launch/kobuki_lab1.launch" />
+
+  <!-- My own nodes -->
+  <node pkg="ras_lab1_motor_controller" type="motor_controller" name="motor_controller" />
+  <node pkg="ras_lab1_cartesian_controllers" type="line_controller" name="line_controller" />
+
+
+</launch>
