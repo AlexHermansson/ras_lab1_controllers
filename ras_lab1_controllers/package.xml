@@ -1,0 +1,20 @@
+<package>
+  <name>ras_lab1_controllers</name>
+  <version>0.1.0</version>
+  <description>
+    Packages for lab1 of the RAS 2018 course.
+  </description>
+  <license>BSD</license>
+
+  <author email="grobgeld@kth.se">Alex Hermansson</author>
+  <maintainer email="grobgeld@kth.se">Alex Hermansson</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <!--More of these run depends for each package-->  
+  <run_depend>ras_lab1_open_loop_control</run_depend> 
+
+  <export>
+    <metapackage/>
+  </export>
+</package>
