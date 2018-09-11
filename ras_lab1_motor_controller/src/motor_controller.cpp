@@ -35,8 +35,8 @@ void twistCallback(const geometry_msgs::Twist::ConstPtr& msg) {
 }
 
 void updateEstimatedSpeed() {
-	w_estimate[0] = (delta_encoder_left * 2 * M_PI * control_frequency) / (ticks_per_rev);
-	w_estimate[1] = (delta_encoder_right * 2 * M_PI * control_frequency) / (ticks_per_rev);
+	w_estimate[0] = (delta_encoder[0] * 2 * M_PI * control_frequency) / (ticks_per_rev);
+	w_estimate[1] = (delta_encoder[1] * 2 * M_PI * control_frequency) / (ticks_per_rev);
 }
 
 void updateDesiredSpeed() {
