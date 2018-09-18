@@ -11,7 +11,7 @@ int adc_right;
 
 void setVelocities(geometry_msgs::Twist& msg) {
 	int error = adc_left - adc_right;
-	msg.angular.z = int (alpha * error);
+	msg.angular.z =  alpha * error;
 }
 
 void ADCallback(const ras_lab1_msgs::ADConverter::ConstPtr& msg) {
