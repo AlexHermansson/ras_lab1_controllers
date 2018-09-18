@@ -17,8 +17,9 @@ const double beta  = 20;
 double v_robot_desired;
 double w_robot_desired;
 
+// init two elements, each with value 0.
 // left is first element, right is second.
-std::vector<double> int_error (2, 0); // init two elements, each with value 0.
+std::vector<double> int_error (2, 0);
 std::vector<double> w_estimate (2, 0); 
 std::vector<double> w_desired (2, 0);
 std::vector<double> delta_encoder (2, 0);
@@ -45,7 +46,6 @@ void updateDesiredSpeed() {
 }
 
 void setPWM(ras_lab1_msgs::PWM& msg) {
-	// Update desired and estimated speed. Then calculate PWM and set it.
 	updateEstimatedSpeed();
 	updateDesiredSpeed();
 
@@ -67,16 +67,16 @@ int main(int argc, char **argv)
 	
 	ros::Publisher pwm_pub = nh.advertise<ras_lab1_msgs::PWM>("/kobuki/pwm", 1);
 	
-	ros::Subscriber enc_sub = nh.subscribe<ras_lab1_msgs::Encoders>("/kobuki/encoders", 1, 
-																																	encoderCallback);
+	ros::Subscriber enc_sub = nh.subscribe<ras_lab1_msgs::Encoders>("/kobuki/encoders", 1, encoderCallback);
 	
-	ros::Subscriber twist_sub = nh.subscribe<geometry_msgs::Twist>("/motor_controller/twist", 1, 
-																																 twistCallback);
+	ros::Subscriber twist_sub = nh.subscribe<geometry_msgs::Twist>("/motor_controller/twist", 1, twistCallback);
 	
 	ras_lab1_msgs::PWM pwm_msg;
 	
 	while (ros::ok()) {
-		ros::spinOnce(); // Listen to encoder and twist topics. Callbacks are invoked
+		// Listen to encoder and twist topics. Callbacks are invoked
+		ros::spinOnce(); 
+
 		setPWM(pwm_msg);
 		pwm_pub.publish(pwm_msg);
 		rate.sleep();

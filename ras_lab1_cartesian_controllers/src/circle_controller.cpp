@@ -20,12 +20,8 @@ int main(int argc, char **argv)
 	
 	geometry_msgs::Twist twist_msg;
 	
+	// Other elements are set to zero
 	twist_msg.linear.x = v;
-	twist_msg.linear.y = 0.0;
-	twist_msg.linear.z = 0.0;
-	
-	twist_msg.angular.x = 0.0;
-	twist_msg.angular.y = 0.0;
 	twist_msg.angular.z = w;
 	
 	while (ros::ok()) {
